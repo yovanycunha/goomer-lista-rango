@@ -1,0 +1,49 @@
+@use 'styles/colors.module.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  justify-items: center;
+
+  background: $white;
+
+  .topbar {
+    height: 62px;
+
+    margin: 0 0 32px;
+
+    background: $green1; 
+  }
+
+  .title {
+    color: $grey2;
+    font-size: 1.7rem;
+    line-height: 2rem;
+
+    margin: 0 auto 32px;
+    letter-spacing: 0;
+  }
+
+  .input {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+
+    margin: 0 auto;
+
+    padding: 0 19px;
+    border: 0;
+
+    box-shadow: 0 2px 4px $grey1;
+    outline: none;
+
+    border-radius: 40px;
+
+    &::placeholder {
+      color: $grey2;
+      text-align: start;
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+    }
+  }
+}

@@ -1,9 +1,12 @@
-import type { NextPage } from 'next'
+import style from './Home/Home.module.scss';
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
-    <div>
-      main page
+    <div className={style.container}>
+      <div className={style.topbar}/>
+      <h1 className={style.title}>Bem-vindo ao Lista Rango</h1>
+
+      <input placeholder='Buscar estabelecimento' className={style.input}/>
     </div>
   )
 }
