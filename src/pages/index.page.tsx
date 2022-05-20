@@ -7,6 +7,7 @@ const Home = () => {
       <h1 className={style.title}>Bem-vindo ao Lista Rango</h1>
 
       <input placeholder='Buscar estabelecimento' className={style.input}/>
+      
     </div>
   )
 }
