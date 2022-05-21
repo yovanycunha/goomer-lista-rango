@@ -1,13 +1,11 @@
-import React from "react";
-import RestaurantProvider from './RestaurantProvider/RestaurantProvider';
-import { ProviderPropsType } from "./types";
+import React from 'react';
 
-const Providers = ({children}: ProviderPropsType) => {
-  return(
-    <RestaurantProvider>
-      {children}
-    </RestaurantProvider>
-  )
+import { TProviderProps } from './types';
+
+import RestaurantProvider from './RestaurantProvider/RestaurantProvider';
+
+function Providers({ children }: TProviderProps) {
+  return <RestaurantProvider>{children}</RestaurantProvider>;
 }
 
-export default Providers
+export default Providers;

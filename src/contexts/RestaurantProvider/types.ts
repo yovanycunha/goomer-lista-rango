@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-type RestaurantHoursType = {
-  "from": string,
-  "to": string,
-  "days": Number[]
-}
+type TRestaurantHours = {
+  from: string;
+  to: string;
+  days: number[];
+};
 
-export type RestaurantType = {
-  id: Number;
+export type TRestaurant = {
+  id: number;
   name: string;
   address: string;
   image: string;
-  hours: RestaurantHoursType[];
+  hours: TRestaurantHours[];
 };
 
-export type RestaurantProviderPropsType = {
-  children: React.ReactNode
-}
+export type TRestaurantProviderProps = {
+  children: React.ReactNode;
+};

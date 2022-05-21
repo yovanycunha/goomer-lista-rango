@@ -1,3 +1,3 @@
-export type ProviderPropsType = {
+export type TProviderProps = {
   children: React.ReactNode;
 };

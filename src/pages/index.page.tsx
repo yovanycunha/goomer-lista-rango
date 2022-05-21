@@ -1,39 +1,37 @@
-import style from './Home/Home.module.scss';
-import { useRestaurantList } from '@hooks/useRestaurantContext/useRestaurantList';
-import RestaurantCard from './Home/components/RestaurantCard/RestaurantCard';
 import Loading from '@components/Loading/Loading';
+import { useRestaurantList } from 'src/hooks/useRestaurantContext/useRestaurantList';
 
-const Home = () => {
-  const { allRestaurants } = useRestaurantList()
+import RestaurantCard from './Home/components/RestaurantCard/RestaurantCard';
+
+import style from './Home/Home.module.scss';
+
+function Home() {
+  const { allRestaurants } = useRestaurantList();
 
   const cardMock = allRestaurants[0];
 
   console.log('mock', cardMock);
 
-  const renderAllRestaurants = () => {
-    return (
-      <div className={style.cardsContainer}>
-      { allRestaurants.map(restaurant => (
-        <RestaurantCard name={restaurant.name} address={restaurant.address}/>
-        ))
-      }
-      </div>
-    )
-  }
-  
-  
+  const renderAllRestaurants = () => (
+    <div className={style.cardsContainer}>
+      {allRestaurants.map((restaurant) => (
+        <RestaurantCard name={restaurant.name} address={restaurant.address} />
+      ))}
+    </div>
+  );
+
   return (
     <>
-      <div className={style.topbar}/>
+      <div className={style.topbar} />
       <div className={style.container}>
-      <h1 className={style.title}>Bem-vindo ao Lista Rango</h1>
+        <h1 className={style.title}>Bem-vindo ao Lista Rango</h1>
 
-      <input placeholder='Buscar estabelecimento' className={style.input}/>
+        <input placeholder="Buscar estabelecimento" className={style.input} />
 
-      { !allRestaurants ? <Loading/> : renderAllRestaurants() }
-    </div>
+        {!allRestaurants ? <Loading /> : renderAllRestaurants()}
+      </div>
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;

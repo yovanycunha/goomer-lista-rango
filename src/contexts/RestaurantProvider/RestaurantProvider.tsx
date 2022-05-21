@@ -1,38 +1,35 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { BASE_URL } from 'src/utils/endpoints/restaurantsAPI';
-import { createContext } from 'use-context-selector'
-import { RestaurantProviderPropsType, RestaurantType } from './types';
+import { createContext } from 'use-context-selector';
 
-export const RestaurantContext = createContext({} as RestaurantType[]);
+import { TRestaurantProviderProps, TRestaurant } from './types';
 
-const RestaurantProvider = ({ children }: RestaurantProviderPropsType) => {
+export const RestaurantContext = createContext({} as TRestaurant[]);
 
-  const [allRestaurants, setAllRestaurants] = useState<RestaurantType[]>([])
+function RestaurantProvider({ children }: TRestaurantProviderProps) {
+  const [allRestaurants, setAllRestaurants] = useState<TRestaurant[]>([]);
 
   const getAllRestaurants = async () => {
     const res = await axios.get(BASE_URL);
     const data = await res.data;
 
-    setAllRestaurants(data)
+    setAllRestaurants(data);
 
     return {
-      data: data
-    }
-    
-  }
+      data,
+    };
+  };
 
   useEffect(() => {
-    getAllRestaurants()
-  }, [])
+    getAllRestaurants();
+  }, []);
 
   return (
-    <RestaurantContext.Provider
-      value={allRestaurants}
-    >
+    <RestaurantContext.Provider value={allRestaurants}>
       {children}
     </RestaurantContext.Provider>
-  )
+  );
 }
 
 export default RestaurantProvider;

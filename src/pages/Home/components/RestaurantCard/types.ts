@@ -1,4 +1,4 @@
-export type RestaurantCardPropsType = {
+export type TRestaurantCardProps = {
   name: string;
   address: string;
-}
+};
