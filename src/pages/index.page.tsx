@@ -1,5 +1,5 @@
 import style from './Home/Home.module.scss';
-import { useRestaurantList } from '../hooks/useRestaurantContext/useRestaurantList';
+import { useRestaurantList } from '@hooks/useRestaurantContext/useRestaurantList';
 
 const Home = () => {
   const { allRestaurants } = useRestaurantList()
