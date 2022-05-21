@@ -1,0 +1,32 @@
+@use 'styles/colors.module.scss' as *;
+
+.container {
+  display: flex;
+
+  flex-direction: row;
+
+  padding: 32px 0;
+
+  background-color: $white;
+  box-shadow: 0 2px 4px $grey1;
+  border-radius: 4px;
+
+  .info {
+    color: $grey2;
+    text-align: left;
+
+    margin-left: 25px;
+
+    .name {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+
+      margin: 0 auto;
+    }
+
+    .address {
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+  }
+}

@@ -1,16 +1,16 @@
 import React from 'react'
 
 type RestaurantHoursType = {
-  "from": String,
-  "to": String,
+  "from": string,
+  "to": string,
   "days": Number[]
 }
 
 export type RestaurantType = {
   id: Number;
-  name: String;
-  address: String;
-  image: String;
+  name: string;
+  address: string;
+  image: string;
   hours: RestaurantHoursType[];
 };
 

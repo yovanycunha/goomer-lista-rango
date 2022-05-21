@@ -1,24 +1,26 @@
 @use 'styles/colors.module.scss' as *;
 
+.topbar {
+  height: 62px;
+
+  margin: 0 0 32px;
+
+  background: $green1;
+}
+
 .container {
   display: flex;
   flex-direction: column;
 
   justify-items: center;
 
+  padding: 0 8px;
+
   background: $white;
-
-  .topbar {
-    height: 62px;
-
-    margin: 0 0 32px;
-
-    background: $green1; 
-  }
 
   .title {
     color: $grey2;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     line-height: 2rem;
 
     margin: 0 auto 32px;
@@ -28,12 +30,12 @@
   .input {
     width: 80%;
 
-    font-size: 1.6rem;
-    line-height: 1.9rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
 
     margin: 0 auto;
 
-    padding: 0 19px;
+    padding: 4px 19px;
     border: 0;
 
     box-shadow: 0 2px 4px $grey1;
@@ -47,5 +49,13 @@
       font-size: 1.2rem;
       line-height: 1.7rem;
     }
+  }
+
+  .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    margin: 24px 0;
   }
 }
