@@ -14,8 +14,6 @@
 
   justify-items: center;
 
-  padding: 0 8px;
-
   background: $white;
 
   .title {
@@ -57,5 +55,7 @@
     gap: 24px;
 
     margin: 24px 0;
+
+    padding: 0 24px;
   }
 }

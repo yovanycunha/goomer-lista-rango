@@ -8,8 +8,12 @@ function RestaurantCard(props: TRestaurantCardProps) {
   return (
     <div className={style.container}>
       <div className={style.imgContainer}>
-        {/* <Image src={cardMock.image} alt="Restaurant Image"/>  */}
-        IMG
+        <Image
+          src={props.image}
+          alt="Restaurant Image"
+          width={100}
+          height={100}
+        />
       </div>
 
       <div className={style.info}>

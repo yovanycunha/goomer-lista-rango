@@ -8,14 +8,14 @@ import style from './Home/Home.module.scss';
 function Home() {
   const { allRestaurants } = useRestaurantList();
 
-  const cardMock = allRestaurants[0];
-
-  console.log('mock', cardMock);
-
   const renderAllRestaurants = () => (
     <div className={style.cardsContainer}>
       {allRestaurants.map((restaurant) => (
-        <RestaurantCard name={restaurant.name} address={restaurant.address} />
+        <RestaurantCard
+          name={restaurant.name}
+          address={restaurant.address}
+          image={restaurant.image}
+        />
       ))}
     </div>
   );
