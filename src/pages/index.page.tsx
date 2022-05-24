@@ -35,7 +35,7 @@ function Home() {
 
   const filterRestaurant = useCallback(() => {
     const filtered = allRestaurants.filter((item: TRestaurant) =>
-      item.name.includes(keyword)
+      item.name.toLowerCase().trim().includes(keyword.toLowerCase().trim())
     );
 
     return filtered;
