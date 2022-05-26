@@ -8,7 +8,7 @@ import RestaurantCard from './Home/components/RestaurantCard/RestaurantCard';
 
 import style from './Home/Home.module.scss';
 
-const DEBOUNCE_DELAY = 1000;
+const DEBOUNCE_DELAY = 500;
 
 function Home() {
   const { allRestaurants } = useRestaurantList();
@@ -25,6 +25,8 @@ function Home() {
     <div className={style.cardsContainer}>
       {filteredRestaurants.map((restaurant) => (
         <RestaurantCard
+          key={`${Math.random()} + ${restaurant.name}`}
+          id={restaurant.id}
           name={restaurant.name}
           address={restaurant.address}
           image={restaurant.image}

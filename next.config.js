@@ -11,8 +11,8 @@ module.exports = withImages(
     },
     pageExtensions: ['page.tsx'],
     handleImages: ['jpg', 'jpeg', 'png', 'webp'],
-    images : {
-      domains: ['images.unsplash.com']
+    images: {
+      domains: ['images.unsplash.com'],
     },
     webpack(config) {
       config.module.rules.push({
