@@ -1,3 +1,23 @@
+@use 'styles/colors.module.scss' as *;
+
+.topbar {
+  height: 62px;
+
+  margin: 0 0 32px;
+
+  background: $green1;
+}
+
 .container {
   padding: 0 35px;
+
+  .infoContainer {
+    display: flex;
+    flex-direction: row;
+
+    .info {
+      // display: flex;
+      // flex-direction: column;
+    }
+  }
 }
